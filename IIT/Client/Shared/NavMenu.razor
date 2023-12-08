@@ -1,0 +1,21 @@
+﻿<HxNavbar Color="ThemeColor.Primary">
+    <HxNavbarBrand>ICH.UA</HxNavbarBrand>
+    <HxNavbarToggler />
+    <HxNavbarCollapse>
+        <HxNav CssClass="me-auto mb-2 mb-lg-0">
+            <HxNavLink Href="/">Кандидату ></HxNavLink>
+            <HxNavLink Href="/">Роботодавцю ></HxNavLink>
+        </HxNav>
+    </HxNavbarCollapse>
+</HxNavbar>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

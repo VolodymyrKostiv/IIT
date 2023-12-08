@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager MyNavigationManager
+
+<header>
+    <div class="headerBackground">
+        <NavMenu />
+    </div>
+</header>
+<div class="page">
+    <main>
+        <article class="content px-4">
+            <HxMessenger Position="ToastContainerPosition.BottomEnd" />
+            <HxMessageBoxHost />
+            @Body
+        </article>
+    </main>
+</div>
